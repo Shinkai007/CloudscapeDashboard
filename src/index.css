@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+[data-card] > *{
+  /*height: 1000px;*/
+  /*overflow: auto;*/
+  /*transform: scale(0.7);*/
+  transform-origin: top left;
+}

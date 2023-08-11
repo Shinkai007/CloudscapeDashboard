@@ -139,7 +139,7 @@ export default () => {
                 }
             }}
             ariaLabel="Stacked area chart"
-            height={300}
+            height={100}
             hideFilter
             xScaleType="time"
             xTitle="Time (UTC)"

@@ -62,7 +62,7 @@ export default () => {
                 }
             }}
             ariaLabel="Single data series line chart"
-            height={300}
+            height={100}
             xTitle="Time (UTC)"
             yTitle="Revenue (USD)"
             empty={

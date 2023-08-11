@@ -54,6 +54,7 @@ export default () => {
                     </Box>
                 </Box>
             }
+            size={"small"}
             noMatch={
                 <Box textAlign="center" color="inherit">
                     <b>No matching data</b>

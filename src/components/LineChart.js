@@ -95,7 +95,7 @@ export default () => {
                 }
             }}
             ariaLabel="Single data series line chart"
-            height={300}
+            height={100}
             hideFilter
             hideLegend
             xScaleType="time"

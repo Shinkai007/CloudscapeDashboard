@@ -1,11 +1,13 @@
 import * as React from "react";
 import SideNavigation from "@cloudscape-design/components/side-navigation";
-import {Badge} from "@cloudscape-design/components";
+import { useNavigate } from 'react-router-dom';
 
 export default () => {
     const [activeHref, setActiveHref] = React.useState(
-        "#/page1"
+        "/bar-chart"
     );
+    const navigate = useNavigate();
+
     return (
         <SideNavigation
             activeHref={activeHref}
@@ -13,28 +15,19 @@ export default () => {
             onFollow={event => {
                 if (!event.detail.external) {
                     event.preventDefault();
+                    navigate(event.detail.href);
                     setActiveHref(event.detail.href);
                 }
             }}
             items={[
-                { type: "link", text: "Page 1", href: "#/page1" },
-                { type: "link", text: "Page 2", href: "#/page2" },
-                { type: "link", text: "Page 3", href: "#/page3" },
-                { type: "link", text: "Page 4", href: "#/page4" },
-                { type: "divider" },
-                {
-                    type: "link",
-                    text: "Notifications",
-                    href: "#/notifications",
-                    info: <Badge color="red">23</Badge>
-                },
-                {
-                    type: "link",
-                    text: "Documentation",
-                    href: "https://example.com",
-                    external: true
-                }
+                { type: "link", text: "Bar Chart", href: "/bar-chart" },
+                { type: "link", text: "Line Chart", href: "/line-chart" },
+                { type: "link", text: "Area Chart", href: "/area-chart" },
+                { type: "link", text: "Mixed Line Bar Chart", href: "/mixed-line-bar-chart" },
+                { type: "link", text: "Pie Chart", href: "/pie-chart" },
             ]}
         />
     );
 }
+
+

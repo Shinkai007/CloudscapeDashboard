@@ -75,7 +75,7 @@ export default () => {
                 }
             }}
             ariaLabel="Mixed bar chart"
-            height={300}
+            height={100}
             xScaleType="categorical"
             xTitle="Budget month"
             yTitle="Costs (USD)"
